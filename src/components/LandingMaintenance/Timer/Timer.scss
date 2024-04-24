@@ -1,0 +1,96 @@
+.container__maintenance {
+  .container__maintenance__content {
+    .container__maintenance__content--left {
+      .container__maintenance__content--left__timer-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #333333;
+        margin-top: 2rem;
+      }
+
+      .container__maintenance__content--left__timer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        width: 100%;
+        height: auto;
+        margin-top: 0.85rem;
+        align-items: center;
+        user-select: none;
+
+        .container__maintenance__content--left__timer__dias,
+        .container__maintenance__content--left__timer__horas,
+        .container__maintenance__content--left__timer__mins,
+        .container__maintenance__content--left__timer__segs {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: auto;
+          padding: 0.5rem;
+          background-color: #212121;
+          color: #ffffff;
+          border-radius: 1rem;
+
+          .value {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #fa5a4e;
+          }
+
+          .label {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+//-----------------*************** Medias Queries ***************-----------------//
+@media (width < 1024px) {
+  .container__maintenance {
+    .container__maintenance__content {
+      .container__maintenance__content--left {
+        .container__maintenance__content--left__timer {
+          .container__maintenance__content--left__timer__dias,
+          .container__maintenance__content--left__timer__horas,
+          .container__maintenance__content--left__timer__mins,
+          .container__maintenance__content--left__timer__segs {
+            .value {
+              font-size: 2rem;
+            }
+            .label {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width < 560px) {
+  .container__maintenance__content--left {
+    padding: 30px;
+    .container__maintenance__content--left__timer {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+
+      .container__maintenance__content--left__timer__dias,
+      .container__maintenance__content--left__timer__horas,
+      .container__maintenance__content--left__timer__mins,
+      .container__maintenance__content--left__timer__segs {
+        .value {
+          font-size: 1.5rem;
+        }
+
+        .label {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
