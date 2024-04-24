@@ -5,8 +5,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import "./index.scss";
 
 function App() {
-  // const hostProduction = window.location.href === "https://jaicodigital.com/";
-  const hostProduction = window.location.href === "http://localhost:5173/";
+  const hostProduction = window.location.href === "https://jaicodigital.com/";
 
   return (
     <Router>
